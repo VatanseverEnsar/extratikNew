@@ -30,7 +30,7 @@ class PatientController extends Controller
 
     public function getPatients()
     {
-        $path = public_path() . "/patient.json"; // Adjust the path if necessary
+        $path = public_path() . "/patient.json"; 
         $json = json_decode(file_get_contents($path), true);
         return response()->json($json);
     }
